@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
 	});
 });
 
-//Post new burger to table
+// Post new burger to table
 router.post('/', function(req, res) {
 	burger.create([
 		"burger_name"
@@ -29,8 +29,15 @@ router.post('/', function(req, res) {
 	});
 });
 
-// // Update the burger to devoured with PUT
-// router.put('/:id', function(req, res) {
-// 	var burgerID = 'id = ' + req.params.id;
-// 	burger.update()
-// })
+// Update the burger to devoured with PUT
+router.put('/:id', function(req, res) {
+	var burgerID = 'id = ' + req.params.id;
+
+	burger.update({
+		devoured: req.body.devoured
+	}, burgerID, function() {
+		res.redirect('/');
+	});
+});
+
+module.exports = router;

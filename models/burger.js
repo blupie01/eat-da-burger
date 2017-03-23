@@ -11,6 +11,13 @@ var burger = {
 		orm.create('burgers', cols, vals, function(res) {
 			cb(res);
 		});
+	},
+	// Update function
+	update: function(obgColVals, burgerID, cb) {
+		orm.update('burgers', objColVals, burgerID, function(res) {
+			cb(res);
+		});
 	}
-
 };
+
+module.exports = burger;

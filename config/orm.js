@@ -55,4 +55,21 @@ var orm = {
 			cb(res);
 		});
 	},
+	// Function to update burger devoured status
+	update: function(tableName, objColVals, burgerID, cb) {
+		var queryStr = "UPDATE " + tableName;
+		queryStr += " SET ";
+		queryStr += objToSql(objColVals);
+		queryStr += " WHERE ";
+		queryStr += burgerID;
+
+		connection.query(queryStr, function(err, res) {
+			if (err) {
+				throw err;
+			};
+			cb(res);
+		});
+	}
 };
+
+module.exports = orm;
