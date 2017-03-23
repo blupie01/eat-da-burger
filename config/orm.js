@@ -27,13 +27,32 @@ function objToSql(ob) {
 // ORM
 var orm = {
 	// Function to find all data in burgers table
-	all: function(tableName, cbFunc) {
+	all: function(tableName, cb) {
 		var queryStr = 'SELECT * FROM ' + tableName + ';';
 		connection.query(queryStr, function(err, res) {
 			if (err) {
 				throw err;
 			};
-			cbFunc(res);
+			cb(res);
 		});
-	}
+	},
+	// Function to create new burger
+	create: function(tableName, cols, vals, cb) {
+		console.log(cols);
+		// Setting up query string for mysql to use
+		var queryStr = 'INSERT INTO ' + tableName;
+		queryStr += ' (';
+		queryStr += cols.toString();
+		queryStr += ') ';
+		queryStr += "VALUES (";
+		queryStr += printQuestionMarks(vals.length);
+		queryStr += ')';
+
+		connection.query(queryStr, vals, function(err, res) {
+			if (err) {
+				throw err;
+			};
+			cb(res);
+		});
+	},
 };
