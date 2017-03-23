@@ -26,5 +26,14 @@ function objToSql(ob) {
 
 // ORM
 var orm = {
-	all: function()
-}
+	// Function to find all data in burgers table
+	all: function(tableName, cbFunc) {
+		var queryStr = 'SELECT * FROM ' + tableName + ';';
+		connection.query(queryStr, function(err, res) {
+			if (err) {
+				throw err;
+			};
+			cbFunc(res);
+		});
+	}
+};
