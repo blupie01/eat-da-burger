@@ -3,6 +3,16 @@
 	src: url(../fonts/Double_Bubble_shadow.otf);
 }
 
+@font-face {
+	font-family: southside_fizz;
+	src: url(../fonts/DK_Southside_fizz.otf);
+}
+
+@font-face {
+	font-family: tango_charlie;
+	src: url(../fonts/RWATangoCharlie-Slanted.otf);
+}
+
 @-webkit-keyframes backgroundScroll {
 	from {background-position: 0 0;}
 	to {background-position: 0 50000px;}
@@ -11,6 +21,11 @@
 @keyframes backgroundScroll {
 	from {background-position: 0 0;}
 	to {background-position: 0 50000px;}
+}
+
+/*Only hides scrollbar for Chrome*/
+::-webkit-scrollbar {
+	display: none;
 }
 
 html {
@@ -25,12 +40,15 @@ html, body {
 	height: 100%;
 }
 
-body {
-	margin: 0 auto;
-}
-
 h1, h3, h4 {
 	margin-top: 0;
+	margin-bottom: 0;
+}
+
+input[type="text"] {
+	text-align: center;
+	font-family: tango_charlie;
+    font-size: 1.5em;
 }
 
 #container {
@@ -39,10 +57,60 @@ h1, h3, h4 {
 	background-color: rgba(255, 255, 255, .8);
 	height: 100%;
 	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #header {
 	background-color: #1C637A;
 	font-family: double_bubble;
 	color: #78CCC1;
+	margin-bottom: 15px;
+}
+
+#make-burger-label {
+	color: black;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+#results-container {
+	height: 100%;
+}
+
+#results {
+	height: 110%;
+}
+
+#eaten, #not-eaten {
+	overflow-y: scroll;
+}
+
+#eaten {
+	background-color: #EDA64A;
+	height: 100%;
+}
+
+#not-eaten {
+	background-color: #15B37E;
+	height: 100%;
+}
+
+.fresh-or-tummy {
+	font-family: tango_charlie;
+	font-size: 5em;
+}
+
+#add_burger {
+	font-family: double_bubble;
+	font-size: 2em;
+	color: #78CCC1;
+}
+
+.single-burger-container {
+	font-family: southside_fizz;
+	font-weight: bold;
+	font-size: 2em;
+	margin: 8px 0px;
+	padding: 10px 0px;
+	background-color: rgba(255, 255, 255, .8);
 }

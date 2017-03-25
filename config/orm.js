@@ -1,14 +1,14 @@
 var connection = require('../config/connection.js');
 
 // Question marks for sql values
-function printQuestionsMarks(num) {
+function printQuestionMarks(num) {
 	var arr = [];
 
 	for (var i = 0; i < num; i++) {
 		arr.push("?");
 	};
 
-	return arr.toStirng();
+	return arr.toString();
 };
 
 // Get column names in SQL table
@@ -44,7 +44,7 @@ var orm = {
 		queryStr += ' (';
 		queryStr += cols.toString();
 		queryStr += ') ';
-		queryStr += "VALUES (";
+		queryStr += 'VALUES (';
 		queryStr += printQuestionMarks(vals.length);
 		queryStr += ')';
 
