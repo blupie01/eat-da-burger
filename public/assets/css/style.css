@@ -4,13 +4,13 @@
 }
 
 @font-face {
-	font-family: southside_fizz;
-	src: url(../fonts/DK_Southside_fizz.otf);
+	font-family: bellerose;
+	src: url(../fonts/Bellerose.ttf);
 }
 
 @font-face {
-	font-family: tango_charlie;
-	src: url(../fonts/RWATangoCharlie-Slanted.otf);
+	font-family: mexcellent;
+	src: url(../fonts/mexcellent_rg.ttf);
 }
 
 @-webkit-keyframes backgroundScroll {
@@ -47,7 +47,7 @@ h1, h3, h4 {
 
 input[type="text"] {
 	text-align: center;
-	font-family: tango_charlie;
+	font-family: mexcellent;
     font-size: 1.5em;
 }
 
@@ -96,7 +96,7 @@ input[type="text"] {
 }
 
 .fresh-or-tummy {
-	font-family: tango_charlie;
+	font-family: mexcellent;
 	font-size: 5em;
 }
 
