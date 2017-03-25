@@ -3,10 +3,10 @@
 	src: url(../fonts/Double_Bubble_shadow.otf);
 }
 
-@font-face {
+/*@font-face {
 	font-family: bellerose;
 	src: url(../fonts/Bellerose.ttf);
-}
+}*/
 
 @font-face {
 	font-family: mexcellent;
@@ -107,7 +107,7 @@ input[type="text"] {
 }
 
 .single-burger-container {
-	font-family: bellerose;
+	/*font-family: bellerose;*/
 	font-weight: bold;
 	font-size: 2em;
 	margin: 8px 0px;
