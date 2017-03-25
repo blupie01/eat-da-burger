@@ -1,4 +1,4 @@
-var connection = require('./connection.js');
+var connection = require('../config/connection.js');
 
 // Question marks for sql values
 function printQuestionsMarks(num) {
@@ -31,7 +31,7 @@ var orm = {
 		var queryStr = 'SELECT * FROM ' + tableName + ';';
 		connection.query(queryStr, function(err, res) {
 			if (err) {
-				throw err;
+				console.log(err);
 			};
 			cb(res);
 		});
@@ -50,7 +50,7 @@ var orm = {
 
 		connection.query(queryStr, vals, function(err, res) {
 			if (err) {
-				throw err;
+				console.log(err);
 			};
 			cb(res);
 		});
@@ -65,7 +65,7 @@ var orm = {
 
 		connection.query(queryStr, function(err, res) {
 			if (err) {
-				throw err;
+				console.log(err);
 			};
 			cb(res);
 		});
