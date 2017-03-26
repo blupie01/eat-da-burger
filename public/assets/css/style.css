@@ -3,10 +3,20 @@
 	src: url(../fonts/Double_Bubble_shadow.otf);
 }
 
-/*@font-face {
-	font-family: bellerose;
-	src: url(../fonts/Bellerose.ttf);
-}*/
+@font-face {
+	font-family: bright_young_things;
+	src: url(../fonts/Bright_Young_Things.ttf);
+}
+
+@font-face {
+	font-family: flowers_of_destiny;
+	src: url(../fonts/CFFlowersofDestinyPersonal.ttf);
+}
+
+@font-face {
+	font-family: eat_at_joes;
+	src: url(../fonts/Eat_at_Joes.ttf);
+}
 
 @font-face {
 	font-family: mexcellent;
@@ -96,7 +106,7 @@ input[type="text"] {
 }
 
 .fresh-or-tummy {
-	font-family: mexcellent;
+	font-family: flowers_of_destiny;
 	font-size: 5em;
 }
 
@@ -107,7 +117,7 @@ input[type="text"] {
 }
 
 .single-burger-container {
-	/*font-family: bellerose;*/
+	font-family: bright_young_things;
 	font-weight: bold;
 	font-size: 2em;
 	margin: 8px 0px;
